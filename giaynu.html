@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Giày Nữ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -19,7 +19,9 @@
 
     <link rel="stylesheet" href="./css/style1.css">
 
-
+<script>
+     localStorage.setItem("localListValue", "nu");
+</script>
     
 </head>
 <body>
@@ -39,8 +41,8 @@
             <h5><b>Menu</b></h5>
             <div class="bar-block">
                 <button class="bar-item button border-bottom small padding-large hover-text-green tablink">ALL</button>
-                <button class="bar-item button border-bottom small padding-large hover-text-green tablink">BOOT Nu</button>
-                <button class="bar-item button border-bottom small padding-large hover-text-green tablink">Cao Got</button>
+                <button class="bar-item button border-bottom small padding-large hover-text-green tablink">BOOT Nữ</button>
+                <button class="bar-item button border-bottom small padding-large hover-text-green tablink">Cao Gót</button>
               
             </div>
         </div>
@@ -50,7 +52,7 @@
                 <select class="left col s5 select show-ipad" name="" id="" onchange="updateListValue(this.value)" style="padding-right: 0px;">
                     <option value="nu">ALL</option>
                     <option value="boot">BOOT Nu</option>
-                    <option value="cg">Cao Got</option>
+                    <option value="cg">Cao Gót</option>
                     
                 </select>
                 <select class="right col s5 select" name="" id="sort" style="padding-right: 0px" onchange="sapXep(this)">
@@ -68,12 +70,30 @@
 
         </div>
     </div>
-    <footer class="hana-grey padding-24" id="footer">
-    </footer>
+    <footer id="footer" style="background-color:#b3b3cc;" class="page-footer font-small stylish-color-dark pt-4">
+        <script>
+            $(function(){
+                      loadData();
+                  })
+              function loadData(){
+                $(document).ready(function(){
+            
+            $("#search").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $(".container .card").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+          
+              } 
+            
+          </script>
    
 <script src="./menu.js"></script>
 <script src="./giaynu.js"></script>
-<script src="./header.js"></script>   
+<script src="./header.js"></script> 
+<script src="./footer.js"></script> 
 <link rel="stylesheet" href="./css/style1.css">
 
 <link rel="stylesheet" href="./TestCSS.css">

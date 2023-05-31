@@ -20,8 +20,9 @@ function homeBest(){
         else if(menu[i].cg == true) {
             spcg.push( menu[i])
         } 
-        else 
-        spnam.push( menu[i])
+        else if (menu[i].sneakerN == true){
+            spnam.push(menu[i])
+        }
     }
 
     console.log(best, spnu, spnam)
@@ -108,7 +109,7 @@ function homeBest(){
                 '<div class="card center"' +' data-id='+list[i].id + '>'+
                     '<img class="image" style="width: 100%;" src="./img/Sanpham/'+ list[i].image +'" alt="">'+
                     '<h5>'+ list[i].name+'</h5>'+
-                    '<h6 class="text-green" style="padding-bottom: 16px;">'+list[i].price+'</h6>'+
+                    '<h6 class="text-green" style="padding-bottom: 16px;">'+''+list[i].price+'</h6>'+
                     '<button>Add To Card</button>;'+
                     
                 '</div>'+

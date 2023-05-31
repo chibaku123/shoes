@@ -1,7 +1,7 @@
 
 localStorage.setItem("soLuongSanPham",1);
-localStorage.setItem("Color","100%");
-localStorage.setItem("Size","100%");
+localStorage.setItem("color","Back");
+localStorage.setItem("size1","40");
 let sanPhamDefault = "Tên sản phẩm";
 let sanPhamValue = localStorage.getItem("localSanPham") || sanPhamDefault;
 let tenSanPham  = localStorage.getItem('tenSanPham')
@@ -101,7 +101,7 @@ function updateGio(){
         {
             color: localStorage.getItem("color"),
             size1: localStorage.getItem("size1"),
-            size: localStorage.getItem("sizeSanPham"),
+            // size: localStorage.getItem("Size"),
             img: localStorage.getItem("localSanPham"),
             name: localStorage.getItem("tenSanPham"),
             soLuong: localStorage.getItem("soLuongSanPham"),

@@ -49,7 +49,7 @@ function menuShop(){
             listMenu.sort(function(a, b){return a.years - b.years})
             break;
         case "7":
-            listMenu.sort(function(a, b){return b.users - a.users})
+            listMenu.sort(function(a, b){return b.best - a.best})
             break;
         default:
             break;
@@ -83,10 +83,10 @@ function menuShop(){
             listText = "ALL";
             break;
         case  "boot":
-            listText = "BOOT NU";
+            listText = "BOOT Nữ";
             break;
         case "cg":
-            listText = "Cao Got";
+            listText = "Cao Gót";
             break;
         default:
             break;
@@ -112,7 +112,7 @@ function menuShop(){
             break;
     }
 }
-window.onload = menuShop();
+
 let tabEl = document.getElementsByClassName("tablink");
 for (let i = 0; i < tabEl.length; i++) {
     tabEl[i].addEventListener("click",function(){
@@ -132,6 +132,7 @@ for (let i = 0; i < tabEl.length; i++) {
         menuShop();
     });
 }
+
 function updateListValue(el){
    
     localStorage.setItem("localListValue",el);//options[i].value);
@@ -146,6 +147,8 @@ function updateListValue(el){
         }
     }
 }
+window.onload = menuShop();
+
 function sapXep(el){
     let options = el.children;
     for (let i = 0; i < options.length; i++) {
@@ -155,3 +158,4 @@ function sapXep(el){
         }
     }
 }
+
